@@ -157,14 +157,22 @@ main {
 	color: #757575;
 }
 
+.main-tables-container {
+	display: flex;
+	overflow-x: scroll;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x proximity;
+}
+
 /* Tabla Monedas */
 
 .main-currency-table {
+	scroll-snap-align: center;
 	width: 70%;
 	min-width: 235px;
-	max-width: 500%;
+	max-width: 400px;
 	height: 360px;
-	margin: 0 auto;
+	margin: 0 10px;
 	font-family: "Inter", sans-serif;
 }
 
@@ -262,11 +270,12 @@ main {
 /* Tabla Comisiones */
 
 .main-comissions-table {
+	scroll-snap-align: center;
 	width: 70%;
 	min-width: 235px;
-	max-width: 500%;
+	max-width: 400px;
 	height: 360px;
-	margin: 0 auto;
+	margin: 0 10px;
 	font-family: "Inter", sans-serif;
 }
 
@@ -460,7 +469,7 @@ main {
 	width: 100%;
 	min-width: 320px;
 	height: 50vh;
-	background-image: url(/assets/img/bitcoinbaby.jpg);
+	background-image: url(/assets/img/bitcoinbabyx2.png);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -523,10 +532,10 @@ main {
 	position: relative;
 	scroll-snap-align: center;
 	width: 70%;
-	min-width: 230px;
+	min-width: 190px;
 	max-width: 300px;
 	height: 250px;
-	margin: 50px 20px 0;
+	margin: 50px 5px 0;
 	padding: 0 15px;
 	background-color: var(--just-white);
 	border: none;
@@ -642,4 +651,38 @@ main {
 .limited {
 	background-color: var(--grey);
 	color: var(--warm-black-alt);
+}
+
+/* Footer */
+
+footer {
+	height: 150px;
+	width: 100%;
+	min-width: 320px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--bitcoin-orange);
+}
+
+.footer__contact-list {
+	list-style-type: none;
+}
+
+.footer__contact-list a {
+	display: inline-block;
+	padding: 4px 0;
+	text-decoration: none;
+	color: var(--just-white);
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+}
+
+.footer__logo {
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	color: var(--soft-orange);
 }
